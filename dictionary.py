@@ -16,6 +16,7 @@ while(True):
         key = input("Podaj słowo do zdefiniowania: ")
         definition = input("Podaj definicję: ")
         definitions[key] = definition
+        
         print("Definicja została pomyślnie dodana!")
     
     elif (choice == "2"):
