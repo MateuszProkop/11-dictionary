@@ -18,16 +18,28 @@ while(True):
         definitions[key] = definition
         print("Definicja została pomyślnie dodana!")
     
-    if (choice == "2"):
-        print("Wybrałeś 2")
+    elif (choice == "2"):
+        key = input("Jakiej definicji szukasz? ")
+
+        if key in definitions:
+            print(definitions[key])
+        else:
+            print("Nie znaleziono takiej definicji ", key)
     
-    if (choice == "3"):
-        print("Wybrałeś 3")
+    elif (choice == "3"):
+        key = input("Jaką definicję chcesz usunąć? ")
 
-    if (choice == "4"):
-        print("Wyświetl słownik")
+        if key in definitions:
+            del definitions[key]
+            print("Usunięto definicję - ", key)
+        else:
+            print("Nie znaleziono definicji o nazwie - ", key)
 
-    if (choice == "5"):
+    elif (choice == "4"):
+        for key in definitions:
+            print(key)
+
+    elif (choice == "5"):
         print("See you soon")
         break
 
